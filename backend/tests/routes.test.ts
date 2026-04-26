@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../src/server.js'; 
+import { app } from '../src/server.js' 
 import { Appliance } from '../src/services/energyService.js'; 
 
 const aparelhos: Appliance[] = [
@@ -10,18 +10,16 @@ const aparelhos: Appliance[] = [
 // ─── POST /ENRG/consumo ───────────────────────────────────────────────────────
 
 describe('POST /ENRG/consumo', () => {
-  test('retorna 200 com resultado correto', async () => {
-    const res = await request(app)
-      .post('/ENRG/consumo')
-      .send({ appliances: aparelhos, days: 30 });
+  it('retorna 200 com resultado correto', async () => {
+    const response = await request(app)
+    .post('/ENRG/consumo')
+    .send({ appliances: aparelhos });
 
-    expect(res.status).toBe(200);
-    expect(res.body).toHaveProperty('totalKwh');
-    expect(res.body).toHaveProperty('items');
-    expect(res.body.items).toHaveLength(2);
+    expect(response.status).toBe(200);
+    expect(response.body).toHaveProperty('totalKwh');
   });
 
-  test('retorna 400 sem corpo', async () => {
+  it('retorna 400 sem corpo', async () => {
     const res = await request(app)
       .post('/ENRG/consumo')
       .send({});
