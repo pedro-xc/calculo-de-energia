@@ -3,9 +3,9 @@ interface Props {
 }
 
 const members = [
-  { name: 'Nome do Aluno 1', ra: '12345678' },
-  { name: 'Nome do Aluno 2', ra: '87654321' },
-  { name: 'Nome do Aluno 3', ra: '45678912' },
+  { name: 'Enzo Garofalo Pampana', ra: '24008914' },
+  { name: 'Pedro Ximenes Costa', ra: '24000763' },
+  { name: 'Yuri Cardoso Balieiro', ra: '24011525' },
 ]
 
 export default function SobreScreen({ onBack }: Props) {
