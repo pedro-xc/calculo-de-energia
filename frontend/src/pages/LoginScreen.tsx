@@ -22,7 +22,7 @@ export default function LoginScreen({ onLogin }: Props) {
       <div className="login-container">
         <header className="login-header">
           <h2 style={{ fontSize: '3rem' }}>Bem‑vindo!</h2>
-          <p>Calculadora de Energia</p>
+          <h1 style={{ fontSize: '1.5rem', fontWeight: 700 }}>Calculadora de Energia</h1>
         </header>
 
         <div className="card login-card">
