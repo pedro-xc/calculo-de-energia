@@ -1,3 +1,5 @@
+import fotoequipe from '../assets/fotoequipe.jpeg'
+
 interface Props {
   onBack: () => void
 }
@@ -19,7 +21,7 @@ export default function SobreScreen({ onBack }: Props) {
         <div className="card">
           <div className="section-label">Nossa Equipe</div>
           <div className="team-photo-container">
-            <img src="equipe.jpg" alt="Foto da Equipe" />
+            <img src={fotoequipe} alt="Foto da Equipe" />
           </div>
           <ul className="member-list">
             {members.map(m => (

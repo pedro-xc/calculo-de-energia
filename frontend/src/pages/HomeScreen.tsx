@@ -51,8 +51,6 @@ export default function HomeScreen({ onLogout, onNavigate }: Props) {
       {tab === 'consumo' && <TabConsumo />}
       {tab === 'conta' && <TabConta />}
       {tab === 'simular' && <TabSimular />}
-
-      <footer>API em localhost:3001</footer>
     </div>
   )
 }
