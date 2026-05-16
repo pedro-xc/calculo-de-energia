@@ -14,7 +14,7 @@ app.use(express.json());
  */
 app.get('/', (req: Request, res: Response) => {
   res.json({ 
-    message: 'API de Consumo de Energia - GCEIC26', 
+    message: 'API de Consumo de Energia', 
     version: '1.0.0' 
   });
 });
